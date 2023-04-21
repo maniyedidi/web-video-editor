@@ -1,0 +1,32 @@
+.homeContainer {
+  padding: 10px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .options {
+      display: flex;
+      gap: 20px;
+      .option {
+        text-transform: uppercase;
+      }
+      .option:hover {
+        color: #7a4ffc;
+      }
+    }
+  }
+  .editorImage {
+    width: 800px;
+    height: auto;
+    border: 2px solid #a992ef;    
+    -moz-box-shadow: 10px 10px 5px #a992ef;
+    -webkit-box-shadow: 10px 10px 5px #a992ef;
+    box-shadow: 10px 10px 5px #a992ef;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+  }
+  .homeBody{
+    display: flex;
+    gap: 20px;
+  }
+}
