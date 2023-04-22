@@ -1,7 +1,6 @@
 import { Button } from '@mui/material';
 
 const MENU = ['Products', 'Pricing', 'Learn'];
-import styles from '../styles/Login.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
