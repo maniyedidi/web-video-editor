@@ -1,7 +1,7 @@
 import sampleImage01 from '@/assets/videos/01.jpg';
 import sampleImage02 from '@/assets/videos/02.jpeg';
 import sampleImage03 from '@/assets/videos/03.jpeg';
-import VideoPreview from '../video-preview';
+import VideoPreview from './video-preview';
 
 const TrendingVideos = () => {
   return (
