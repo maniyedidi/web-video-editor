@@ -12,17 +12,25 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import { Home } from '@mui/icons-material';
 import AccountMenu from '../account-menu';
+import { useRouter } from 'next/router';
 
 const SideMenu = () => {
+  const router = useRouter();
   return (
     <div className='p-2 flex  bg-white flex-col justify-between border-r-2 drop-shadow h-[calc(100vh-60px)]'>
       <div className='flex items-center flex-col pt-4'>
-        <Button  startIcon={<AddIcon/>} size='large' variant='contained' color='primary'>
+        <Button
+          startIcon={<AddIcon />}
+          size='large'
+          variant='contained'
+          color='primary'
+          onClick={() => router.push('video-editor')}
+        >
           New Video
         </Button>
         <List>
           <ListItem>
-            <ListItemButton selected={true}>  
+            <ListItemButton selected={true}>
               <ListItemIcon>
                 <Home color='primary' />
               </ListItemIcon>
@@ -65,8 +73,8 @@ const SideMenu = () => {
             <ListItemText primary='Upgrade' />
           </ListItemButton>
         </ListItem>
-        <ListItem>         
-          <AccountMenu/>
+        <ListItem>
+          <AccountMenu />
         </ListItem>
       </List>
     </div>
