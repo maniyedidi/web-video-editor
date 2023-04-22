@@ -5,16 +5,16 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { ListItemButton, ListItemText } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
+import { useRouter } from 'next/router';
 
 export default function AccountMenu() {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = event => {
@@ -23,6 +23,12 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const onLogout = ()=>{
+    handleClose();
+    router.push("/")
+  }
+
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -57,8 +63,8 @@ export default function AccountMenu() {
               content: '""',
               display: 'block',
               position: 'absolute',
-              top: 0,
-              right: 14,
+              bottom: 0,
+              left: 14,
               width: 10,
               height: 10,
               bgcolor: 'background.paper',
@@ -68,7 +74,7 @@ export default function AccountMenu() {
           }
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
       >
         <MenuItem onClick={handleClose}>
           <Avatar /> Profile
@@ -89,7 +95,7 @@ export default function AccountMenu() {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={onLogout}>
           <ListItemIcon>
             <Logout fontSize='small' />
           </ListItemIcon>

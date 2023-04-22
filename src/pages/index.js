@@ -18,7 +18,7 @@ export default function Login() {
       const waNumber = otplessUser.waNumber;
 
       alert('User Name is ' + waName + ' ' + waNumber);
-
+      setWhatsAppLogin(false);
       // Handle the signup/signin process
       // ...
     };
