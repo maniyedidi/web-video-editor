@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import SideMenu from '@/components/side-menu';
+import TrendingVideos from '@/components/trending-videos';
 import {
   Add,
   CollectionsOutlined,
@@ -47,11 +48,7 @@ const Home = () => {
               label='Request a recording'
             />
           </div>
-          <div className='p-5 border border-solid border-indigo-600 bg-[#FDFBFC]'>
-            <div>Trending from VMaker</div>
-            <div className='flex flex-row gap-1'></div>
-          </div>
-
+          <TrendingVideos />
           <Tabs value={value} onChange={handleChange}>
             <Tab label='Recently edited' />
             <Tab label='Team  activities' />

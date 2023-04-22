@@ -11,6 +11,7 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import CollectionsIcon from '@mui/icons-material/Collections';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import { Home } from '@mui/icons-material';
+import AccountMenu from '../account-menu';
 
 const SideMenu = () => {
   return (
@@ -64,13 +65,8 @@ const SideMenu = () => {
             <ListItemText primary='Upgrade' />
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <ListItemButton>
-            <ListItemIcon>
-              <AccountCircleIcon />
-            </ListItemIcon>
-            <ListItemText primary='My Account' />
-          </ListItemButton>
+        <ListItem>         
+          <AccountMenu/>
         </ListItem>
       </List>
     </div>

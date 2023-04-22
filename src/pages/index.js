@@ -5,9 +5,11 @@ import LoginLeftImg from '../assets/login.jpg';
 import Image from 'next/image';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Login() {
   const [whatsAppLogin, setWhatsAppLogin] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     // Define the 'otpless' function
     window.otpless = otplessUser => {
@@ -80,7 +82,9 @@ export default function Login() {
               )
             }}
           />
-          <Button variant='contained'>Log in</Button>
+          <Button variant='contained' onClick={() => router.push('/home')}>
+            Log in
+          </Button>
         </div>
         <div>
           <div className='flex flex-col gap-4 w-[350px]'>
