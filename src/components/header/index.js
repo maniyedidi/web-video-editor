@@ -6,17 +6,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 4
-};
-
 const Header = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -43,7 +32,9 @@ const Header = () => {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style}>
+        <Box
+          className='absolute top-[50%] left-[50%] w-[400px] bg-white shadow p-4'          
+        >
           <Typography id='modal-modal-title' variant='h6' component='h2'>
             Invite people
           </Typography>
@@ -51,12 +42,14 @@ const Header = () => {
             Invite your team to create and share videos together.
           </Typography>
           <TextField placeholder='Email Address' fullWidth sx={{ mt: 2 }} />
-          <Button fullWidth={true} onClick={handleClose} variant='outlined' sx={{ mt: 2 }}>
+          <Button
+            fullWidth={true}
+            onClick={handleClose}
+            variant='outlined'
+            sx={{ mt: 2 }}
+          >
             Send Invite
-          </Button>
-          <Typography sx={{ mt: 2 }}>
-            If you're having issues adding a user, <a> contact support.</a>
-          </Typography>
+          </Button>          
         </Box>
       </Modal>
     </div>

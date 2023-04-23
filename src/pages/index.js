@@ -42,6 +42,7 @@ export default function Login() {
         <Image
           className='md:w-[300px] md:h-[240px] lg:w-[500px] lg:h-[400px] p-10'
           src={LoginLeftImg}
+          alt="Info"
         />
       </div>
       <div className=' relative flex flex-col items-center bg-white gap-4 w-[100%] md:w-[50%] rounded-tr-lg rounded-br-lg '>

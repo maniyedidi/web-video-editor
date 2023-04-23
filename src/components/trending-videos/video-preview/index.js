@@ -3,7 +3,7 @@ import Image from 'next/image';
 const VideoPreview = ({ imgSrc, videoSrc, title }) => {
   return (
     <div className='flex flex-col gap-1 group'>
-      <Image src={imgSrc} className='w-[220px] h-[120px] group-hover:hidden' />
+      <Image src={imgSrc} className='w-[220px] h-[120px] group-hover:hidden' alt={title} />
 
       <video
         className='hidden w-[220px] h-[120px]  group-hover:block'
